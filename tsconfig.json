@@ -1,0 +1,18 @@
+{
+  "extends": "@tsconfig/svelte/tsconfig.json",
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules/*",
+    "__sapper__/*",
+    "public/*",
+    "./tailwind.config.js"
+  ],
+  "compilerOptions": {
+    "typeRoots": [
+      "node_modules/@types",
+      "./src/types"
+    ]
+  }
+}

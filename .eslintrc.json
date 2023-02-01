@@ -1,0 +1,54 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "extraFileExtensions": [
+      ".svelte"
+    ],
+    "project": [
+      "./tsconfig.json"
+    ],
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "svelte3"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.svelte"
+      ],
+      "processor": "svelte3/svelte3"
+    }
+  ],
+  "rules": {
+    "@typescript-eslint/no-inferrable-types": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/explicit-function-return-type": [
+      "error"
+    ],
+    "@typescript-eslint/typedef": [
+      "error",
+      {
+        "memberVariableDeclaration": true
+      }
+    ]
+  },
+  "settings": {
+    "svelte3/typescript": true
+  },
+  "ignorePatterns": [
+    "node_modules",
+    "tailwind.config.js",
+    "postcss.config.js"
+  ]
+}
