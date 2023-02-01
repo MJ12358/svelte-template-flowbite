@@ -10,6 +10,9 @@
     "./tailwind.config.js"
   ],
   "compilerOptions": {
+    "types": [
+      "svelte"
+    ],
     "typeRoots": [
       "node_modules/@types",
       "./src/types"
